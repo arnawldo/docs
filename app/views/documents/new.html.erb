@@ -1,0 +1,29 @@
+<%= form_for([current_user, @document]) do |f| %>
+
+  <% if @document.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@document.errors.count, "error") %> prohibited
+        this document from being saved:
+      </h2>
+      <ul>
+        <% @document.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+    <%= f.file_field :doc, direct_upload: true %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
+
+<%= link_to 'Back', user_documents_url(current_user) %>

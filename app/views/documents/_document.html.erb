@@ -1,0 +1,27 @@
+<li>
+  <div id="my-progress-<%= document.id %>" class="my-progress">
+    <div id="my-bar-<%= document.id %>" class="my-bar"></div>
+  </div>
+
+  <%= document.title %>
+  <% if document.doc.attached? %>
+    <a href="<%= rails_blob_url(document.doc, disposition: "attachment") %>">Link</a>
+  <% end %>
+  <%= link_to 'Destroy Document', [document.user, document],
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+
+  <button id="download-button-<%= document.id %>"
+          class="download-button"
+          data-element-id="<%= document.id %>"
+          data-element-title="<%= document.title %>"
+          data-download-link="<%= rails_blob_url(document.doc, disposition: "attachment") %>">
+    Download
+  </button>
+
+  <!-- This will hold the local download file -->
+  <a id="save-file-<%= document.id %>"
+     class="save-file">
+    Save File
+  </a>
+</li>
