@@ -1,0 +1,15 @@
+.save-file {
+    display: none;
+}
+
+.my-progress {
+    display: none;
+    width: 100%;
+    background-color: grey;
+}
+
+.my-bar {
+    width: 1%;
+    height: 10px;
+    background-color: blue;
+}
