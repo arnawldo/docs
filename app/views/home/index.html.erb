@@ -1,0 +1,4 @@
+<h1>Welcome to Documents</h1>
+<% if current_user %>
+  <%= link_to 'Go to documents', user_documents_url(current_user) %>
+<% end %>
