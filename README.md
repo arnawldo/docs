@@ -1,24 +1,9 @@
-# README
+# Docs - A simple file transfer app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This a Rails app that allows upload and download of any files.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Setup
+* Clone repo
+* `cd` into repo and run `bundle`
+* Run migrations `rails db:migrate`
+* Start server with `rails s` 
